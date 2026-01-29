@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="th">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>About | Steel Catalog</title>
+  <link rel="stylesheet" href="./app.css">
+</head>
+<body>
+<header>
+  <div class="container navbar">
+    <div class="brand">
+      <span class="logo"></span>
+      <div class="title"><b>Steel Catalog</b><span>About</span></div>
+    </div>
+    <nav class="menu">
+      <a href="./index.html">Home</a>
+      <a class="active" href="./about.html">About</a>
+      <a href="./products.html">Products</a>
+      <a href="./contact.html">Contact</a>
+      <a href="./map.html">Map</a>
+    </nav>
+  </div>
+</header>
+
+<main class="container">
+  <section class="card">
+    <h2>About</h2>
+    <p class="sub">แก้ข้อความหน้านี้ให้เป็นบริษัทคุณได้เลย (สั้น ๆ แต่ดูน่าเชื่อถือ)</p>
+
+    <div style="height:10px"></div>
+    <div class="row">
+      <span class="badge">✅ เช็คราคาไว</span>
+      <span class="badge">✅ เทียบสเปกให้</span>
+      <span class="badge">✅ ส่งงานตามเงื่อนไข</span>
+    </div>
+
+    <div style="height:12px"></div>
+    <ul class="small" style="margin:0; padding-left:18px;">
+      <li>ขายเหล็กก่อสร้างและวัสดุก่อสร้างหลากหลายหมวด</li>
+      <li>อธิบายการใช้งานให้เข้าใจง่าย ไม่ขายมั่ว</li>
+      <li>ลูกค้าบอก “งาน+ขนาด+จำนวน+จังหวัดส่ง” แล้วเราจัดให้</li>
+    </ul>
+  </section>
+
+  <footer class="small">© <span id="year"></span></footer>
+</main>
+
+<div class="toast" id="toast"></div>
+
+<!-- LINE -->
+<div class="line-fab" id="lineFab"><span class="icon">💬</span><span class="text">แอด LINE</span></div>
+<div id="lineModalBackdrop" aria-hidden="true">
+  <div id="lineModal">
+    <div class="top">
+      <div><p class="title">สแกน QR แอดไลน์ ✅</p><p class="desc">เช็คราคาไว</p></div>
+      <button class="close" id="closeLineModal">ปิด</button>
+    </div>
+    <div class="qrWrap"><img class="qr" src="./S_gainfriends_2dbarcodes_BW.png" alt="LINE QR Code"></div>
+  </div>
+</div>
+
+<script src="./shared.js"></script>
+</body>
+</html>

@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="th">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Home | Steel Catalog</title>
+  <link rel="stylesheet" href="./app.css">
+</head>
+<body>
+<header>
+  <div class="container navbar">
+    <div class="brand">
+      <span class="logo"></span>
+      <div class="title">
+        <b>Steel Catalog</b>
+        <span>โทนน้ำเงิน-ขาว | เว็บทดสอบขายเหล็ก</span>
+      </div>
+    </div>
+    <nav class="menu">
+      <a class="active" href="./index.html">Home</a>
+      <a href="./about.html">About</a>
+      <a href="./products.html">Products</a>
+      <a href="./contact.html">Contact</a>
+      <a href="./map.html">Map</a>
+    </nav>
+  </div>
+</header>
+
+<main class="container">
+  <section class="hero">
+    <div class="card">
+      <h1>ขายเหล็กให้ดูโปร…แบบไม่ต้องพูดเยอะ 😄</h1>
+      <p class="sub">ลูกค้ากดดูหมวดเอง → คุณค่อยปิดดีล (มือไม่ต้องพิมพ์จนล้า) ✅</p>
+
+      <div style="height:12px"></div>
+      <div class="row">
+        <span class="badge">⚡ โหลดไว</span>
+        <span class="badge">🧩 แยกหมวดชัด</span>
+        <span class="badge">📲 มี QR แอดไลน์</span>
+      </div>
+
+      <div style="height:14px"></div>
+      <div class="row">
+        <a class="btn" href="./products.html">ไปดู Products</a>
+        <a class="btn secondary" href="./contact.html">ติดต่อเรา</a>
+      </div>
+
+      <p class="small" style="margin-top:12px;">
+        ทริค: ส่งลิงก์หมวดให้ลูกค้าได้เลย เช่น <b>category.html?id=rebar</b> 🔥
+      </p>
+    </div>
+
+    <aside class="card">
+      <h2>เช็คราคาไว 🚀</h2>
+      <p class="sub">กด LINE มุมขวาล่าง → สแกน QR → ส่ง “งาน/ขนาด/จำนวน/จังหวัดส่ง”</p>
+      <div style="height:10px"></div>
+      <button class="btn secondary" id="copyHintBtn" type="button">📋 คัดลอกข้อความทักลูกค้า</button>
+      <p class="small" style="margin-top:10px;">
+        ตัวอย่าง: “งาน + ขนาด/ความยาว/จำนวน + จังหวัดส่ง เดี๋ยวเช็คราคาให้ไว ✅”
+      </p>
+    </aside>
+  </section>
+
+  <footer class="small">© <span id="year"></span> | Steel Catalog</footer>
+</main>
+
+<div class="toast" id="toast"></div>
+
+<!-- LINE -->
+<div class="line-fab" id="lineFab" title="แอดไลน์">
+  <span class="icon">💬</span>
+  <span class="text">แอด LINE</span>
+</div>
+<div id="lineModalBackdrop" aria-hidden="true">
+  <div id="lineModal" role="dialog" aria-modal="true">
+    <div class="top">
+      <div>
+        <p class="title">สแกน QR แอดไลน์ ✅</p>
+        <p class="desc">ส่ง “งาน + ขนาด + จำนวน + จังหวัดส่ง” เดี๋ยวเช็คราคาให้ไว</p>
+      </div>
+      <button class="close" id="closeLineModal">ปิด</button>
+    </div>
+    <div class="qrWrap">
+      <img class="qr" src="./S_gainfriends_2dbarcodes_BW.png" alt="LINE QR Code">
+    </div>
+  </div>
+</div>
+
+<script src="./shared.js"></script>
+<script>
+  document.getElementById("copyHintBtn").addEventListener("click", async () => {
+    const text = "งาน + ขนาด/ความยาว/จำนวน + จังหวัดส่ง เดี๋ยวเช็คราคาให้ไว ✅";
+    try{ await navigator.clipboard.writeText(text); showToast("คัดลอกแล้ว 📋✅"); }
+    catch(e){ showToast("คัดลอกไม่ได้ ลองก็อปเองได้เลย 😅"); }
+  });
+</script>
+</body>
+</html>
